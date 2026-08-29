@@ -1,0 +1,11 @@
+{
+  "hosteleria": [
+    {"name": "Hosteltur", "url": "https://www.hosteltur.com/feed"},
+    {"name": "Preferente", "url": "https://www.preferente.com/feed"}
+  ],
+  "marketing": [
+    {"name": "Search Engine Land", "url": "https://searchengineland.com/feed"},
+    {"name": "Marketing AI Institute", "url": "https://www.marketingaiinstitute.com/blog/rss.xml"},
+    {"name": "Social Media Today", "url": "https://www.socialmediatoday.com/feeds/news/"}
+  ]
+}

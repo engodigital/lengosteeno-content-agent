@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Piano Comunicazione Lengosteeno — Giugno 2026</title>
+<style>
+  :root {
+    --bg: #0d1117; --card: #161b22; --border: #30363d;
+    --text: #e6edf3; --muted: #8b949e;
+    --ads: #3b82f6; --ads-bg: rgba(59,130,246,.1);
+    --organic: #10b981; --organic-bg: rgba(16,185,129,.1);
+    --prod: #f59e0b; --prod-bg: rgba(245,158,11,.1);
+    --clickup: #7c3aed; --clickup-bg: rgba(124,58,237,.1);
+    --danger: #ef4444; --danger-bg: rgba(239,68,68,.1);
+    --it: #f97316; --es: #06b6d4;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: var(--bg); color: var(--text); font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; line-height: 1.65; }
+  nav { position: sticky; top: 0; z-index: 100; background: rgba(13,17,23,.95); backdrop-filter: blur(12px); border-bottom: 1px solid var(--border); padding: .65rem 2rem; display: flex; gap: 1.2rem; flex-wrap: wrap; }
+  nav a { color: var(--muted); text-decoration: none; font-size: .75rem; letter-spacing: .05em; text-transform: uppercase; transition: color .2s; white-space: nowrap; }
+  nav a:hover { color: var(--text); }
+  .container { max-width: 920px; margin: 0 auto; padding: 0 1.5rem; }
+  section { padding: 3.5rem 0; border-bottom: 1px solid var(--border); }
+  .section-label { font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; margin-bottom: .4rem; }
+  h2 { font-size: 1.6rem; font-weight: 700; margin-bottom: .4rem; }
+  h3 { font-size: 1.05rem; font-weight: 600; margin-bottom: .5rem; }
+  .lead { color: var(--muted); font-size: .95rem; margin-bottom: 2rem; }
+  p { font-size: .9rem; color: #cbd5e1; margin-bottom: .75rem; }
+
+  /* HERO */
+  .hero { padding: 4rem 0 3rem; text-align: center; }
+  .hero .eyebrow { display: inline-block; background: var(--danger-bg); color: var(--danger); border: 1px solid rgba(239,68,68,.3); border-radius: 20px; padding: .3rem .9rem; font-size: .72rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.2rem; }
+  .hero h1 { font-size: clamp(1.8rem,5vw,2.8rem); font-weight: 800; line-height: 1.15; margin-bottom: .8rem; }
+  .hero h1 span { color: var(--ads); }
+  .hero .sub { color: var(--muted); font-size: .95rem; }
+  .pill-row { display: flex; gap: .5rem; justify-content: center; flex-wrap: wrap; margin-top: 1.2rem; }
+  .pill { background: var(--card); border: 1px solid var(--border); border-radius: 20px; padding: .25rem .75rem; font-size: .78rem; color: var(--muted); }
+
+  /* CARDS */
+  .cards { display: grid; gap: .9rem; }
+  .c2 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+  .c3 { grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.4rem; }
+  .card .ct { font-size: .68rem; letter-spacing: .08em; text-transform: uppercase; font-weight: 600; margin-bottom: .4rem; }
+  .card h3 { font-size: .95rem; margin-bottom: .3rem; }
+  .card p { font-size: .83rem; color: var(--muted); margin: 0; }
+  .card.ads { border-color: var(--ads); background: linear-gradient(135deg, var(--card), var(--ads-bg)); }
+  .card.ads .ct { color: var(--ads); }
+  .card.organic { border-color: var(--organic); background: linear-gradient(135deg, var(--card), var(--organic-bg)); }
+  .card.organic .ct { color: var(--organic); }
+  .card.prod { border-color: var(--prod); background: linear-gradient(135deg, var(--card), var(--prod-bg)); }
+  .card.prod .ct { color: var(--prod); }
+
+  /* SCRIPT BOX */
+  .script-block { background: #0a0e14; border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.6rem; margin-bottom: 1rem; font-size: .85rem; line-height: 2; }
+  .script-block .lang-badge { display: inline-block; border-radius: 4px; padding: .1rem .45rem; font-size: .68rem; font-weight: 700; letter-spacing: .04em; text-transform: uppercase; margin-bottom: .8rem; }
+  .it-badge { background: rgba(249,115,22,.15); color: var(--it); }
+  .es-badge { background: rgba(6,182,212,.15); color: var(--es); }
+  .script-block .timing { color: var(--muted); font-size: .75rem; font-style: italic; }
+  .script-block .line { color: var(--text); }
+  .script-block .note { color: var(--prod); font-size: .78rem; font-style: italic; }
+  .script-block hr { border: none; border-top: 1px solid var(--border); margin: .8rem 0; }
+
+  /* TARGETING */
+  .target-card { background: var(--card); border: 1px solid var(--border); border-radius: 10px; padding: 1.2rem 1.4rem; margin-bottom: .8rem; }
+  .target-card h4 { font-size: .88rem; font-weight: 600; margin-bottom: .6rem; display: flex; align-items: center; gap: .5rem; }
+  .target-card ul { list-style: none; padding: 0; }
+  .target-card li { font-size: .83rem; color: var(--muted); padding: .25rem 0; border-bottom: 1px solid var(--border); display: flex; gap: .6rem; }
+  .target-card li:last-child { border-bottom: none; }
+  .target-card li::before { content: "→"; color: var(--ads); flex-shrink: 0; }
+
+  /* EPISODI */
+  .ep-list { display: flex; flex-direction: column; gap: .6rem; }
+  .ep { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: .9rem 1.2rem; display: grid; grid-template-columns: 2rem 1fr auto; gap: .75rem; align-items: start; }
+  .ep-num { font-size: 1.2rem; font-weight: 700; color: var(--border); line-height: 1.4; }
+  .ep h4 { font-size: .88rem; font-weight: 600; margin-bottom: .15rem; }
+  .ep .hook { font-size: .78rem; color: var(--muted); font-style: italic; }
+  .badge { display: inline-block; border-radius: 4px; padding: .1rem .4rem; font-size: .68rem; font-weight: 600; letter-spacing: .03em; text-transform: uppercase; }
+  .b-m { background: var(--organic-bg); color: var(--organic); }
+  .b-d { background: var(--ads-bg); color: var(--ads); }
+  .b-r { background: var(--prod-bg); color: var(--prod); }
+
+  /* FLOW STEP */
+  .flow { display: flex; gap: .4rem; flex-wrap: wrap; align-items: center; font-size: .78rem; color: var(--muted); margin-top: .8rem; }
+  .flow-s { background: #0a0e14; border: 1px solid var(--border); border-radius: 4px; padding: .2rem .5rem; white-space: nowrap; }
+  .flow-a { color: var(--border); }
+
+  /* TABLE */
+  table { width: 100%; border-collapse: collapse; font-size: .83rem; background: var(--card); border: 1px solid var(--border); border-radius: 10px; overflow: hidden; margin-bottom: 1rem; }
+  th { background: #0a0e14; color: var(--muted); padding: .6rem .9rem; text-align: left; font-size: .7rem; text-transform: uppercase; letter-spacing: .06em; border-bottom: 1px solid var(--border); }
+  td { padding: .65rem .9rem; border-bottom: 1px solid var(--border); color: var(--text); vertical-align: top; }
+  tr:last-child td { border-bottom: none; }
+  .td-it { color: var(--it); font-size: .75rem; font-weight: 600; }
+  .td-es { color: var(--es); font-size: .75rem; font-weight: 600; }
+  .td-both { color: var(--organic); font-size: .75rem; font-weight: 600; }
+  .td-ads { color: var(--ads); font-size: .75rem; font-weight: 600; }
+  .td-muted { color: var(--muted); font-size: .8rem; }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; padding: 0; display: flex; flex-direction: column; gap: .4rem; }
+  .checklist li { background: var(--card); border: 1px solid var(--border); border-radius: 6px; padding: .65rem 1rem; font-size: .85rem; display: flex; gap: .7rem; align-items: flex-start; }
+  .checklist li::before { content: "☐"; color: var(--muted); flex-shrink: 0; margin-top: .05rem; }
+  .checklist li strong { color: var(--text); }
+
+  /* RULE BOX */
+  .rule { background: var(--card); border-left: 3px solid var(--ads); border-radius: 0 8px 8px 0; padding: .8rem 1.1rem; margin-bottom: .6rem; font-size: .85rem; }
+  .rule.organic { border-color: var(--organic); }
+  .rule.prod { border-color: var(--prod); }
+  .rule strong { color: var(--ads); }
+  .rule.organic strong { color: var(--organic); }
+  .rule.prod strong { color: var(--prod); }
+
+  /* BUDGET */
+  .budget-row { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: .8rem; margin-bottom: 1rem; }
+  .budget-card { background: var(--card); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; text-align: center; }
+  .budget-card .amount { font-size: 1.5rem; font-weight: 700; color: var(--ads); }
+  .budget-card .label { font-size: .72rem; color: var(--muted); margin-top: .2rem; text-transform: uppercase; letter-spacing: .04em; }
+
+  /* TEXT POST EXAMPLE */
+  .text-post { background: #0a0e14; border: 1px solid var(--border); border-radius: 8px; padding: 1.4rem 1.6rem; font-size: .9rem; line-height: 2.2; }
+  .text-post p { color: var(--text); margin: 0; font-family: Georgia, serif; }
+
+  /* CLICKUP */
+  .kanban-preview { display: flex; gap: .8rem; overflow-x: auto; padding-bottom: .5rem; margin-bottom: 1rem; }
+  .kol { background: var(--card); border: 1px solid var(--border); border-radius: 8px; min-width: 140px; padding: .8rem; flex-shrink: 0; }
+  .kol-title { font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; font-weight: 700; margin-bottom: .6rem; }
+  .kcard { background: #0a0e14; border: 1px solid var(--border); border-radius: 5px; padding: .4rem .6rem; font-size: .73rem; margin-bottom: .4rem; color: var(--muted); }
+
+  /* DIVIDER */
+  .div { height: 1px; background: var(--border); margin: 1.8rem 0; }
+
+  @media (max-width: 600px) {
+    nav { padding: .5rem 1rem; gap: .7rem; }
+    section { padding: 2.5rem 0; }
+    .budget-row { grid-template-columns: 1fr; }
+    .ep { grid-template-columns: 1.5rem 1fr auto; }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="#overview">Overview</a>
+  <a href="#ads">🔴 Ads Immediate</a>
+  <a href="#crackers">Format Organico</a>
+  <a href="#textpost">Text Posts</a>
+  <a href="#produzione">Setup & Produzione</a>
+  <a href="#calendario">Calendario</a>
+  <a href="#clickup">ClickUp</a>
+</nav>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+  <div class="eyebrow">Traffico immediato — Giugno 2026</div>
+  <h1>Piano Comunicazione<br><span>Lengosteeno</span></h1>
+  <p class="sub">Due profili · Due lingue · Ads immediate + Brand organico</p>
+  <div class="pill-row">
+    <div class="pill">Marco Marengo IT → Italiani in Costa Blanca</div>
+    <div class="pill">Marco Marengo ES → Hosteleros spagnoli</div>
+    <div class="pill">CTA unica: analisi gratuita</div>
+  </div>
+</div>
+
+<!-- SECTION 1 — OVERVIEW -->
+<section id="overview">
+<div class="section-label" style="color:var(--muted)">01 — Struttura</div>
+<h2>Overview strategica</h2>
+<p class="lead">Tutto converge su un'unica conversione: l'analisi gratuita. Due pubblici diversi, stessa offerta, percorsi separati.</p>
+
+<div class="cards c2" style="margin-bottom:1.5rem">
+  <div class="card" style="border-color:var(--it)">
+    <div class="ct" style="color:var(--it)">Profilo IT · Marco Marengo</div>
+    <h3>Italiani trasferiti in Costa Blanca</h3>
+    <p>Ristoratori italiani che gestiscono locali nella zona. Lingua: italiano. Landing: <strong>lengosteeno.com</strong></p>
+  </div>
+  <div class="card" style="border-color:var(--es)">
+    <div class="ct" style="color:var(--es)">Profilo ES · Marco Marengo</div>
+    <h3>Hosteleros spagnoli Costa Blanca</h3>
+    <p>Titolari bar/ristoranti spagnoli. Lingua: spagnolo. Landing: <strong>lengosteeno.es/analisi</strong></p>
+  </div>
+</div>
+
+<div class="cards c3">
+  <div class="card ads">
+    <div class="ct">Traffico immediato</div>
+    <h3>Video Ads — Priorità 1</h3>
+    <p>Video specifici per ads broad. Non aspettano l'algoritmo. €400 in 2 settimane.</p>
+  </div>
+  <div class="card organic">
+    <div class="ct">Brand organico</div>
+    <h3>"Non ci posso crackers"</h3>
+    <p>Rubrica settimanale. Costruisce fiducia. Alimenta il profilo con contenuto evergreen.</p>
+  </div>
+  <div class="card prod">
+    <div class="ct">Base del profilo</div>
+    <h3>Text Posts (OSM style)</h3>
+    <p>Post di testo alternati ai video. Per chi legge, non guarda.</p>
+  </div>
+</div>
+</section>
+
+<!-- SECTION 2 — ADS IMMEDIATE -->
+<section id="ads">
+<div class="section-label" style="color:var(--ads)">02 — Priorità assoluta</div>
+<h2 style="color:var(--ads)">Video Ads — Traffico Immediato</h2>
+<p class="lead">Non aspettiamo l'algoritmo. Questi video hanno un unico scopo: portare traffico qualificato alla landing dell'analisi gratuita. Sono diversi dai video organici: più corti, più diretti, nessuna storia lunga.</p>
+
+<div class="budget-row">
+  <div class="budget-card"><div class="amount">€400</div><div class="label">Budget totale</div></div>
+  <div class="budget-card"><div class="amount">2 sett.</div><div class="label">Durata campagna</div></div>
+  <div class="budget-card"><div class="amount">3 varianti</div><div class="label">Ad per lingua</div></div>
+</div>
+
+<h3 style="margin-bottom:1rem">Le 3 tipologie di ad da girare</h3>
+
+<div class="cards c3" style="margin-bottom:2rem">
+  <div class="card ads">
+    <div class="ct">Ad tipo A · 15s</div>
+    <h3>Il Problema</h3>
+    <p>Pain point diretto. Nessuna storia. Solo il danno e la soluzione immediata.</p>
+  </div>
+  <div class="card ads">
+    <div class="ct">Ad tipo B · 25-30s</div>
+    <h3>Il Risultato</h3>
+    <p>Caso studio in mini-formato. Numero forte. CTA finale.</p>
+  </div>
+  <div class="card ads">
+    <div class="ct">Ad tipo C · 10-12s</div>
+    <h3>L'Offerta Diretta</h3>
+    <p>Zero storytelling. Solo "cosa ottieni" e "dove clicchi". Massima semplicità.</p>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<!-- SCRIPTS ADS -->
+<h3 style="margin-bottom:1rem">Script Ad Tipo A — "Il Problema" (15 secondi)</h3>
+
+<div class="script-block">
+  <div class="lang-badge it-badge">IT</div>
+  <div class="timing">[0–4s] — Faccia in camera, tono diretto</div>
+  <div class="line">Ogni weekend perdi prenotazioni che non sai di aver perso.</div>
+  <hr>
+  <div class="timing">[4–10s] — Voiceover sopra screenshot Google Maps reale</div>
+  <div class="line">No-show, messaggi non visti, un profilo Google Maps che ti fa perdere contro il locale di fronte.</div>
+  <hr>
+  <div class="timing">[10–15s] — Faccia in camera, tono calmo</div>
+  <div class="line">Facciamo 5 analisi gratuite al mese. Vedi esattamente cosa sta succedendo al tuo locale. Link in bio.</div>
+  <div class="note">→ ISTRUZIONE PRODUZIONE: durante lo screenshot Google Maps, mostra un profilo reale (cliente con permesso o profilo demo). Zoom lento sul numero di recensioni.</div>
+</div>
+
+<div class="script-block">
+  <div class="lang-badge es-badge">ES</div>
+  <div class="timing">[0–4s] — Cara a cámara, tono directo</div>
+  <div class="line">Cada fin de semana pierdes reservas que no sabes que has perdido.</div>
+  <hr>
+  <div class="timing">[4–10s] — Voiceover sobre screenshot Google Maps real</div>
+  <div class="line">No-shows, mensajes no vistos, un perfil de Google Maps que te hace perder frente al local de al lado.</div>
+  <hr>
+  <div class="timing">[10–15s] — Cara a cámara, tono calmado</div>
+  <div class="line">Hacemos 5 análisis gratuitos al mes. Ves exactamente qué está pasando en tu local. Link en bio.</div>
+</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Script Ad Tipo B — "Il Risultato" (25–30 secondi)</h3>
+
+<div class="script-block">
+  <div class="lang-badge it-badge">IT</div>
+  <div class="timing">[0–5s] — Faccia in camera, tono sorpreso/entusiasta controllato</div>
+  <div class="line">Una pizzeria in Tenerife: da zero a 1.114 prenotazioni in 7 mesi.</div>
+  <hr>
+  <div class="timing">[5–18s] — Voiceover sopra grafica animata (numero che sale) o B-roll locale</div>
+  <div class="line">Zero passaparola. Zero storia pregressa. Solo un sistema che cattura, filtra e converte clienti nuovi ogni giorno — anche mentre il titolare dorme.</div>
+  <hr>
+  <div class="timing">[18–28s] — Faccia in camera</div>
+  <div class="line">Se hai un locale in Costa Blanca, puoi vedere se funziona anche per te. Analisi gratuita, link in bio.</div>
+  <div class="note">→ ISTRUZIONE PRODUZIONE: la grafica "1.114" deve apparire a schermo in grande durante il voiceover. Usa Captions.ai per l'animazione del numero.</div>
+</div>
+
+<div class="script-block">
+  <div class="lang-badge es-badge">ES</div>
+  <div class="timing">[0–5s] — Cara a cámara</div>
+  <div class="line">Una pizzería en Tenerife: de cero a 1.114 reservas en 7 meses.</div>
+  <hr>
+  <div class="timing">[5–18s] — Voiceover sobre gráfico animado</div>
+  <div class="line">Cero boca a boca. Cero historia previa. Solo un sistema que capta, filtra y convierte clientes nuevos cada día — incluso mientras el dueño duerme.</div>
+  <hr>
+  <div class="timing">[18–28s] — Cara a cámara</div>
+  <div class="line">Si tienes un local en la Costa Blanca, puedes ver si funciona también para ti. Análisis gratuito, link en bio.</div>
+</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Script Ad Tipo C — "L'Offerta Diretta" (10–12 secondi)</h3>
+
+<div class="script-block">
+  <div class="lang-badge it-badge">IT</div>
+  <div class="timing">[0–12s] — Solo voiceover + testo animato a schermo</div>
+  <div class="line">Ogni mese facciamo 5 analisi gratuite.</div>
+  <div class="line">Ti diciamo come stai su Google Maps, quante prenotazioni stai perdendo e cosa fa la concorrenza.</div>
+  <div class="line">Gratis. Solo per chi gestisce un locale in Costa Blanca.</div>
+  <div class="line">Link in bio.</div>
+  <div class="note">→ ISTRUZIONE PRODUZIONE: no faccia. Solo testo che appare riga per riga su sfondo scuro + voiceover. Il più semplice da produrre.</div>
+</div>
+
+<div class="script-block">
+  <div class="lang-badge es-badge">ES</div>
+  <div class="timing">[0–12s] — Solo voiceover + texto animado</div>
+  <div class="line">Cada mes hacemos 5 análisis gratuitos.</div>
+  <div class="line">Te decimos cómo estás en Google Maps, cuántas reservas estás perdiendo y qué hace la competencia.</div>
+  <div class="line">Gratis. Solo para locales de la Costa Blanca.</div>
+  <div class="line">Link en bio.</div>
+</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Targeting Meta — Configurazione precisa</h3>
+
+<div class="target-card">
+  <h4><span class="lang-badge it-badge">IT</span> Campagna italiana</h4>
+  <ul>
+    <li>Lingua interfaccia Facebook: Italiano</li>
+    <li>Location: Alicante (provincia), Murcia, Valencia — raggio 60km da Orihuela Costa</li>
+    <li>Età: 35–60</li>
+    <li>Interessi: Ristorazione, Ristorante, Gestione locale, Italia (expat signals)</li>
+    <li>Esclusioni: Dipendenti (non titolari). Escludi chi ha già interagito con la pagina.</li>
+    <li>Placement: Solo Instagram Reels + Facebook Reels (non Stories, non Feed)</li>
+    <li>Obiettivo campagna: Traffic → Landing Page (non engagement, non views)</li>
+    <li>CTA button: "Scopri di più" → lengosteeno.com/analisi</li>
+  </ul>
+</div>
+
+<div class="target-card">
+  <h4><span class="lang-badge es-badge">ES</span> Campagna spagnola</h4>
+  <ul>
+    <li>Lingua interfaccia Facebook: Spagnolo</li>
+    <li>Location: Orihuela Costa, Torrevieja, La Zenia, Cabo Roig, Guardamar del Segura, Pilar de la Horadada</li>
+    <li>Età: 35–60</li>
+    <li>Interessi: Hostelería, Restaurante, Gestión de empresas, Bar, Cocina profesional</li>
+    <li>Esclusioni: Dipendenti non titolari. Escludi chi ha già interagito.</li>
+    <li>Placement: Solo Instagram Reels + Facebook Reels</li>
+    <li>Obiettivo campagna: Traffic → Landing Page</li>
+    <li>CTA button: "Más información" → lengosteeno.es/analisi</li>
+  </ul>
+</div>
+
+<h3 style="margin-bottom:.8rem; margin-top:1.5rem">Deployment €400 — settimana per settimana</h3>
+<table>
+  <tr><th>Giorno</th><th>Azione</th><th>Budget</th></tr>
+  <tr><td>Giorno 1–3</td><td>Lancia tutte e 3 le varianti per ogni lingua (6 ad set totali). €5/giorno cad.</td><td class="td-ads">€30/giorno</td></tr>
+  <tr><td>Giorno 4</td><td>Analizza CTR e CPC. Spegni le varianti con CTR &lt; 1%. Scala quelle sopra 2%.</td><td class="td-muted">—</td></tr>
+  <tr><td>Giorno 5–7</td><td>Le 2 varianti vincenti per lingua. Aumenta a €15/giorno cad.</td><td class="td-ads">€30/giorno</td></tr>
+  <tr><td>Giorno 8–14</td><td>Solo la variante migliore per lingua. €25/giorno cad. = €50/giorno totale.</td><td class="td-ads">€50/giorno</td></tr>
+  <tr><td style="font-weight:700">TOTALE</td><td style="font-weight:700">Stima realistica</td><td class="td-ads" style="font-weight:700">~€390</td></tr>
+</table>
+
+<div class="rule"><strong>Metrica di successo:</strong> CPL (costo per lead = compilazione form analisi gratuita) &lt; €15 per variante vincente. Se supera €25 dopo 3 giorni, spegni e cambia variante.</div>
+</section>
+
+<!-- SECTION 3 — FORMAT ORGANICO -->
+<section id="crackers">
+<div class="section-label" style="color:var(--organic)">03 — Rubrica settimanale</div>
+<h2>"Non ci posso crackers" · <span style="color:var(--es);font-size:1.3rem">"No me lo puedo crackers"</span></h2>
+<p class="lead">Video da 60 secondi. Problema reale del ristoratore → dato numerico che lo quantifica → insight inaspettato → analisi gratuita come soluzione naturale. Non si vende. Si informa.</p>
+
+<h3 style="margin-bottom:.8rem">Struttura fissa di ogni episodio</h3>
+<table style="margin-bottom:2rem">
+  <tr><th>Segmento</th><th>Durata</th><th>Cosa succede</th><th>Tipo ripresa</th></tr>
+  <tr><td><strong>Hook</strong></td><td>0–5s</td><td>Scena reale del "danno" + "Non ci posso crackers!" + dato in €</td><td class="td-it">Faccia in camera</td></tr>
+  <tr><td><strong>Storia</strong></td><td>5–35s</td><td>Locale anonimo + cosa è successo + dato che nessuno guardava</td><td class="td-muted">Voiceover + B-roll/screenshot</td></tr>
+  <tr><td><strong>Inversione</strong></td><td>35–50s</td><td>"Sai cosa ci dicono i dati?" — 1 insight sorprendente</td><td class="td-muted">Voiceover + testo animato</td></tr>
+  <tr><td><strong>CTA</strong></td><td>50–60s</td><td>"5 analisi al mese, link in bio"</td><td class="td-it">Faccia in camera</td></tr>
+</table>
+
+<h3 style="margin-bottom:1rem">7 episodi pianificati — alta stagione</h3>
+
+<div class="ep-list" style="margin-bottom:2rem">
+  <div class="ep">
+    <div class="ep-num">01</div>
+    <div>
+      <h4>IT: "Il tavolo da sei che non è venuto" · ES: "La mesa de seis que no apareció"</h4>
+      <div class="hook">No-show di sabato sera → costo reale → sistema di conferma automatico che lo previene</div>
+    </div>
+    <span class="badge b-m">Metodo</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">02</div>
+    <div>
+      <h4>IT: "Il messaggio delle 23:47" · ES: "El mensaje de las 23:47"</h4>
+      <div class="hook">WhatsApp di prenotazione arrivato di notte → nessuno risponde → il cliente va dal competitor</div>
+    </div>
+    <span class="badge b-m">Metodo</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">03</div>
+    <div>
+      <h4>IT: "Come il locale accanto ti supera su Maps" · ES: "Cómo el local de al lado te supera en Maps"</h4>
+      <div class="hook">Profilo Google Maps non ottimizzato → il concorrente peggiore ha 80 recensioni in più → ranking perso</div>
+    </div>
+    <span class="badge b-m">Metodo</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">04</div>
+    <div>
+      <h4>IT: "Il mercoledì nero" · ES: "El miércoles negro"</h4>
+      <div class="hook">Calo sistematico metà settimana → nessuno lo ha mai analizzato → è un pattern prevedibile e prevenibile</div>
+    </div>
+    <span class="badge b-d">Dati</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">05</div>
+    <div>
+      <h4>IT: "Il turista svedese che voleva prenotare" · ES: "El turista sueco que quería reservar"</h4>
+      <div class="hook">Turista nordeuropeo cerca locale → profilo in sola lingua locale → va altrove → €0 di fatturato</div>
+    </div>
+    <span class="badge b-m">Metodo</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">06</div>
+    <div>
+      <h4>IT: "Da 87 a 241 recensioni in 6 mesi" · ES: "De 87 a 241 reseñas en 6 meses"</h4>
+      <div class="hook">Caso studio reale: sistema automatico raccolta recensioni → ranking Google Maps salito di 4 posizioni</div>
+    </div>
+    <span class="badge b-r">Risultato</span>
+  </div>
+  <div class="ep">
+    <div class="ep-num">07</div>
+    <div>
+      <h4>IT: "Agosto pieno, settembre vuoto" · ES: "Agosto lleno, septiembre vacío"</h4>
+      <div class="hook">Cliente stagionale non fidelizzato → nessun contatto post-estate → zero ritorno a settembre</div>
+    </div>
+    <span class="badge b-m">Metodo</span>
+  </div>
+</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Script completo — Episodio 01</h3>
+
+<div class="script-block">
+  <div class="lang-badge it-badge">IT — Episodio 01</div>
+
+  <div class="timing">[0–5s · FACCIA IN CAMERA · sfondo fisso]</div>
+  <div class="line">Sabato sera. Tavolo da sei. Prenotato tre settimane fa.</div>
+  <div class="line">Non si è presentato nessuno.</div>
+  <div class="line"><em>Non ci posso crackers.</em></div>
+  <div class="line">Questo ti è costato €260 di mancato incasso.</div>
+  <hr>
+
+  <div class="timing">[5–35s · VOICEOVER + screenshot WhatsApp + screenshot Google Calendar prenotazioni]</div>
+  <div class="line">È successo a un locale che seguiamo a Torrevieja.</div>
+  <div class="line">Il titolare aveva preso la prenotazione a voce. Nessuna conferma. Nessun promemoria.</div>
+  <div class="line">Quando abbiamo guardato i dati del mese,</div>
+  <div class="line">quei tavoli accadevano ogni tre weekend.</div>
+  <div class="line">Sistematicamente.</div>
+  <div class="line"><strong>€800 al mese che sparivano — e lui non lo sapeva.</strong></div>
+  <hr>
+
+  <div class="timing">[35–50s · VOICEOVER + testo animato: "€800/mese · 4 tavoli · 0 conferme"]</div>
+  <div class="line">Sai cosa ci dicono i dati?</div>
+  <div class="line">Il 74% dei no-show su prenotazioni senza conferma automatica.</div>
+  <div class="line">Un messaggio WhatsApp automatico la sera prima: tasso di no-show sceso a zero.</div>
+  <div class="line">Costo del sistema: zero euro.</div>
+  <div class="line">Costo dell'assenza: €800 al mese.</div>
+  <hr>
+
+  <div class="timing">[50–60s · FACCIA IN CAMERA]</div>
+  <div class="line">Se vuoi vedere quanti no-show stai regalando ogni mese,</div>
+  <div class="line">facciamo 5 analisi gratuite al mese per locali in Costa Blanca.</div>
+  <div class="line">Link in bio.</div>
+
+  <div class="note">→ B-ROLL DA USARE: (1) inquadratura tavolo apparecchiato vuoto, (2) schermata WhatsApp con messaggio non letto, (3) screenshot Google/prenotazioni con zoom, (4) numero €800 che appare animato. Puoi girare il tavolo vuoto in qualsiasi ristorante con permesso o usare Higgsfield per generarlo.</div>
+</div>
+
+<div class="script-block">
+  <div class="lang-badge es-badge">ES — Episodio 01</div>
+
+  <div class="timing">[0–5s · CARA A CÁMARA]</div>
+  <div class="line">Sábado por la noche. Mesa de seis. Reservada hace tres semanas.</div>
+  <div class="line">No apareció nadie.</div>
+  <div class="line"><em>No me lo puedo crackers.</em></div>
+  <div class="line">Esto te costó €260 de facturación perdida.</div>
+  <hr>
+
+  <div class="timing">[5–35s · VOICEOVER + screenshots]</div>
+  <div class="line">Le pasó a un local que seguimos en Torrevieja.</div>
+  <div class="line">El dueño había tomado la reserva de viva voz. Sin confirmación. Sin recordatorio.</div>
+  <div class="line">Cuando miramos los datos del mes,</div>
+  <div class="line">esas mesas pasaban cada tres fines de semana.</div>
+  <div class="line">De forma sistemática.</div>
+  <div class="line"><strong>€800 al mes que desaparecían — y él no lo sabía.</strong></div>
+  <hr>
+
+  <div class="timing">[35–50s · VOICEOVER + texto animado]</div>
+  <div class="line">¿Sabes qué nos dicen los datos?</div>
+  <div class="line">El 74% de los no-shows vienen de reservas sin confirmación automática.</div>
+  <div class="line">Un WhatsApp automático la noche anterior: tasa de no-shows bajó a cero.</div>
+  <div class="line">Coste del sistema: cero euros.</div>
+  <div class="line">Coste de no tenerlo: €800 al mes.</div>
+  <hr>
+
+  <div class="timing">[50–60s · CARA A CÁMARA]</div>
+  <div class="line">Si quieres ver cuántos no-shows estás regalando cada mes,</div>
+  <div class="line">hacemos 5 análisis gratuitos al mes para locales de la Costa Blanca.</div>
+  <div class="line">Link en bio.</div>
+</div>
+</section>
+
+<!-- SECTION 4 — TEXT POSTS -->
+<section id="textpost">
+<div class="section-label" style="color:var(--prod)">04 — Per chi legge</div>
+<h2>Text Posts — Stile OSM Finance</h2>
+<p class="lead">Stessa storia del video episodio, riformulata per la lettura. Una riga = un concetto. Spazio bianco come design. 1 numero obbligatorio. CTA sempre in 2 righe separate.</p>
+
+<h3 style="margin-bottom:1rem">Le 6 regole del formato</h3>
+<div class="rule organic"><strong>Regola 1:</strong> Max 1 idea per riga. Se una frase ha 2 concetti, spezzala in 2.</div>
+<div class="rule organic"><strong>Regola 2:</strong> Righe da 5–8 parole. Mai oltre 10 parole su una riga.</div>
+<div class="rule organic"><strong>Regola 3:</strong> Spazio bianco ogni 3–4 righe. Il respiro è parte del design.</div>
+<div class="rule organic"><strong>Regola 4:</strong> 1 numero sempre presente (€, %, giorni). Rende reale la storia.</div>
+<div class="rule organic"><strong>Regola 5:</strong> CTA in 2 righe separate dal corpo. Non attaccata al testo.</div>
+<div class="rule organic"><strong>Regola 6:</strong> Zero emoji decorativi. Al massimo 1 alla fine, solo se rafforza.</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Esempio — Episodio 01 (no-show)</h3>
+
+<div class="cards c2">
+  <div>
+    <div class="lang-badge it-badge" style="margin-bottom:.8rem">IT</div>
+    <div class="text-post">
+      <p>Un ristorante ha perso €800 al mese per un anno intero.</p>
+      <br>
+      <p>Non era bassa stagione.<br>Non era mancanza di clienti.</p>
+      <br>
+      <p>4 tavoli al mese che non si presentavano.<br>Prenotati senza conferma.<br>Nessun promemoria la sera prima.</p>
+      <br>
+      <p>Un messaggio automatico avrebbe recuperato il 74% di quei tavoli.</p>
+      <br>
+      <p>I no-show non sono sfortuna.<br>Sono un pattern nei dati che nessuno sta leggendo.</p>
+      <br>
+      <p>Se vuoi vedere quanti ne stai regalando,<br>l'analisi è gratuita. Link in bio.</p>
+    </div>
+  </div>
+  <div>
+    <div class="lang-badge es-badge" style="margin-bottom:.8rem">ES</div>
+    <div class="text-post">
+      <p>Un restaurante perdió €800 al mes durante un año entero.</p>
+      <br>
+      <p>No era temporada baja.<br>No era falta de clientes.</p>
+      <br>
+      <p>4 mesas al mes que no aparecían.<br>Reservadas sin confirmación.<br>Sin recordatorio la noche anterior.</p>
+      <br>
+      <p>Un mensaje automático habría recuperado el 74% de esas mesas.</p>
+      <br>
+      <p>Los no-shows no son mala suerte.<br>Son un patrón en los datos que nadie está leyendo.</p>
+      <br>
+      <p>Si quieres ver cuántos estás regalando,<br>el análisis es gratuito. Link en bio.</p>
+    </div>
+  </div>
+</div>
+
+<p style="margin-top:1.2rem;font-size:.82rem;color:var(--muted)">⚠️ Nota: IT e ES hanno la stessa struttura ma sono storie indipendenti con target diversi. Le immagini di copertina del post possono essere le stesse (stock + screenshot), i testi sono sempre separati.</p>
+</section>
+
+<!-- SECTION 5 — SETUP E PRODUZIONE -->
+<section id="produzione">
+<div class="section-label" style="color:var(--prod)">05 — Come si produce</div>
+<h2>Setup Home Studio + Workflow Editing</h2>
+<p class="lead">Istruzioni fisse da eseguire ogni volta nello stesso modo. La coerenza visiva si costruisce con la ripetizione del setup, non con attrezzatura costosa.</p>
+
+<div class="cards c2" style="margin-bottom:2rem">
+  <div class="card prod">
+    <div class="ct">Setup fisico</div>
+    <h3>Home studio — angolo fisso</h3>
+    <p>Stessa parete, stessa distanza, stessa luce. Ogni volta uguale.</p>
+  </div>
+  <div class="card prod">
+    <div class="ct">Sessione mensile</div>
+    <h3>1 sessione = 4 episodi</h3>
+    <p>Tutti i mattoni "faccia" del mese si girano in 15–20 minuti in una volta.</p>
+  </div>
+</div>
+
+<h3 style="margin-bottom:1rem">Checklist setup — eseguire nell'ordine</h3>
+<ul class="checklist">
+  <li><strong>POSIZIONE CAMERA:</strong> Telefono in verticale (9:16), altezza occhi o leggermente sopra, distanza 60–70 cm dal viso. Mai dal basso.</li>
+  <li><strong>LUCE:</strong> Finestra alla sinistra o destra del viso (mai frontale). Orario migliore: mattina. Se la luce è troppo forte: tenda traslucida. Spegni tutte le luci artificiali gialle.</li>
+  <li><strong>SFONDO:</strong> Parete neutra (bianca/grigia/beige) con 1 elemento fisso riconoscibile (mensola 2-3 libri, pianta, lampada). Stesso angolo ogni volta = firma visiva del profilo.</li>
+  <li><strong>AUDIO:</strong> Lavalier economico (Boya BY-M1 ~€20) oppure auricolari Apple/Samsung. Test 10 secondi prima di registrare. Chiudi le finestre.</li>
+  <li><strong>VESTIARIO:</strong> Colori solidi, no pattern. No bianco puro né nero puro. Stessa tipologia ogni volta (sempre camicia OPPURE sempre t-shirt).</li>
+  <li><strong>TEST PRE-REGISTRAZIONE:</strong> Gira 10 secondi di test → riascolta audio → controlla luce sul viso → solo allora inizia la sessione.</li>
+</ul>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Sessione mensile — come si organizza (15–20 min totali)</h3>
+<div class="flow">
+  <span class="flow-s">Setup angolo (2 min)</span><span class="flow-a">→</span>
+  <span class="flow-s">Test clip 10s</span><span class="flow-a">→</span>
+  <span class="flow-s">Registra 4 hook "crackers" back-to-back</span><span class="flow-a">→</span>
+  <span class="flow-s">Registra 4 CTA "link in bio" back-to-back</span><span class="flow-a">→</span>
+  <span class="flow-s">Registra voiceover ep.1 (separato)</span><span class="flow-a">→</span>
+  <span class="flow-s">Ripeti per ep.2, 3, 4</span>
+</div>
+
+<div class="div"></div>
+
+<h3 style="margin-bottom:1rem">Workflow editing — 3 tool, ordine fisso</h3>
+
+<table>
+  <tr><th>Step</th><th>Tool</th><th>Cosa fai</th><th>Tempo stimato</th></tr>
+  <tr>
+    <td><strong>1. Editing principale</strong></td>
+    <td><strong>Descript</strong></td>
+    <td>Importi le clip. Il tool trascrive il voiceover. Monti tagliando il testo (non la timeline). Aggiungi B-roll sopra le sezioni. Esporti MP4.</td>
+    <td class="td-muted">20–25 min/ep.</td>
+  </tr>
+  <tr>
+    <td><strong>2. Sottotitoli animati</strong></td>
+    <td><strong>Captions.ai</strong></td>
+    <td>Importi il video esportato da Descript. Auto-genera sottotitoli animati con stile scelto. Esporti versione finale.</td>
+    <td class="td-muted">5 min/ep.</td>
+  </tr>
+  <tr>
+    <td><strong>3. B-roll AI</strong></td>
+    <td><strong>Higgsfield</strong></td>
+    <td>Quando manca footage reale, genera clip AI da prompt. Es: "tavolo da ristorante apparecchiato e vuoto, luce serale, prospettiva dall'alto". Scaricare e usare in Descript.</td>
+    <td class="td-muted">5–10 min</td>
+  </tr>
+</table>
+
+<div class="rule prod"><strong>Nota Higgsfield:</strong> Non è un editor — genera solo B-roll sintetico. Usarlo solo quando non hai footage reale di un locale. Per i primi episodi usa screenshot reali di Google Maps dei tuoi clienti (con permesso): sono più credibili del video generato.</div>
+<div class="rule prod"><strong>Nota DaVinci Resolve:</strong> NON usare per questo workflow. Curva di apprendimento settimane. Overkill per reel da 60 secondi.</div>
+</section>
+
+<!-- SECTION 6 — CALENDARIO -->
+<section id="calendario">
+<div class="section-label" style="color:var(--muted)">06 — Piano operativo</div>
+<h2>Calendario Editoriale — Giugno · Luglio · Agosto 2026</h2>
+<p class="lead">Le ads partono subito. L'organico si affianca dalla settimana 2. Alternanza video "crackers" + text post ogni settimana.</p>
+
+<h3 style="margin-bottom:.8rem">Giugno — Lancio immediato</h3>
+<table style="margin-bottom:2rem">
+  <tr><th>Settimana</th><th>Ads (priorità)</th><th>Organico IT</th><th>Organico ES</th></tr>
+  <tr>
+    <td><strong>Sett. 1</strong><br><span class="td-muted">9–15 giu</span></td>
+    <td class="td-ads">Gira e lancia le 3 varianti ad per entrambe le lingue. Budget €30/giorno.</td>
+    <td>—</td>
+    <td>—</td>
+  </tr>
+  <tr>
+    <td><strong>Sett. 2</strong><br><span class="td-muted">16–22 giu</span></td>
+    <td class="td-ads">Analizza CTR. Spegni varianti sotto 1%. Scala le vincenti.</td>
+    <td class="td-it">Text post: no-show (OSM style)</td>
+    <td class="td-es">Text post: no-show (OSM style)</td>
+  </tr>
+  <tr>
+    <td><strong>Sett. 3</strong><br><span class="td-muted">23–29 giu</span></td>
+    <td class="td-ads">Variante vincente a regime. Budget €50/giorno.</td>
+    <td class="td-it">Reel Ep.01 IT + Text post</td>
+    <td class="td-es">Reel Ep.01 ES + Text post</td>
+  </tr>
+  <tr>
+    <td><strong>Sett. 4</strong><br><span class="td-muted">30 giu</span></td>
+    <td class="td-ads">Fine budget €400. Analisi risultati campagna.</td>
+    <td class="td-it">Text post (tema: Google Maps)</td>
+    <td class="td-es">Text post (tema: Google Maps)</td>
+  </tr>
+</table>
+
+<h3 style="margin-bottom:.8rem">Luglio–Agosto — Alta stagione, pieno regime</h3>
+<table>
+  <tr><th>Settimana</th><th>Martedì</th><th>Giovedì</th><th>Note</th></tr>
+  <tr><td>Luglio sett. 1</td><td class="td-both">Text post (Ep.02 — messaggio 23:47)</td><td class="td-both">Reel Ep.02 IT + ES</td><td class="td-muted">IT e ES in parallelo</td></tr>
+  <tr><td>Luglio sett. 2</td><td class="td-both">Text post standalone (insight dati)</td><td class="td-both">Reel Ep.03 IT + ES</td><td class="td-muted"></td></tr>
+  <tr><td>Luglio sett. 3</td><td class="td-both">Text post (Ep.04 — mercoledì nero)</td><td class="td-both">Reel Ep.04 IT + ES</td><td class="td-muted"></td></tr>
+  <tr><td>Luglio sett. 4</td><td class="td-both">Text post (caso studio)</td><td class="td-both">Reel Ep.05 IT + ES</td><td class="td-muted">Alta stagione: massima visibility</td></tr>
+  <tr><td>Agosto sett. 1</td><td class="td-both">Text post (turista nordeuropeo)</td><td class="td-both">Reel Ep.06 IT + ES</td><td class="td-muted">Caso studio con numeri reali</td></tr>
+  <tr><td>Agosto sett. 2</td><td class="td-both">Text post (fidelizzazione)</td><td class="td-both">Reel Ep.07 IT + ES</td><td class="td-muted">Ultimo episodio stagione</td></tr>
+</table>
+</section>
+
+<!-- SECTION 7 — CLICKUP -->
+<section id="clickup">
+<div class="section-label" style="color:var(--clickup)">07 — Organizzazione team</div>
+<h2>Struttura ClickUp — LENGOSTEENO › COMUNICAZIONE</h2>
+<p class="lead">Ogni contenuto è un task. Tutti i collaboratori vedono lo stato in tempo reale. Lo script è dentro il task, non su fogli volanti.</p>
+
+<h3 style="margin-bottom:1rem">Kanban — 6 stati</h3>
+<div class="kanban-preview">
+  <div class="kol" style="border-color:var(--muted)">
+    <div class="kol-title" style="color:var(--muted)">💡 Idea</div>
+    <div class="kcard">Ep.08 — idea da sviluppare</div>
+  </div>
+  <div class="kol" style="border-color:var(--ads)">
+    <div class="kol-title" style="color:var(--ads)">✍️ Script</div>
+    <div class="kcard">Ep.02 — script in corso</div>
+    <div class="kcard">Ad Tipo A ES — da completare</div>
+  </div>
+  <div class="kol" style="border-color:var(--prod)">
+    <div class="kol-title" style="color:var(--prod)">🎬 In Produzione</div>
+    <div class="kcard">Ep.01 IT — da registrare</div>
+    <div class="kcard">Ad Tipo B IT — editing</div>
+  </div>
+  <div class="kol" style="border-color:var(--it)">
+    <div class="kol-title" style="color:var(--it)">✅ Pronto</div>
+    <div class="kcard">Ep.01 ES — approvato</div>
+  </div>
+  <div class="kol" style="border-color:var(--organic)">
+    <div class="kol-title" style="color:var(--organic)">🚀 Pubblicato</div>
+    <div class="kcard">Text post no-show IT</div>
+  </div>
+  <div class="kol" style="border-color:var(--border)">
+    <div class="kol-title" style="color:var(--muted)">📦 Archivio</div>
+    <div class="kcard">Ad Tipo C ES — spento</div>
+  </div>
+</div>
+
+<h3 style="margin-bottom:1rem; margin-top:1.5rem">Campi custom per ogni task</h3>
+<table>
+  <tr><th>Campo</th><th>Tipo</th><th>Valori</th></tr>
+  <tr><td><strong>Tipo contenuto</strong></td><td>Dropdown</td><td>Video organico / Text post / Video ad / Carousel</td></tr>
+  <tr><td><strong>Lingua</strong></td><td>Dropdown</td><td>IT / ES / Entrambi</td></tr>
+  <tr><td><strong>Canale</strong></td><td>Multi-select</td><td>Instagram / Facebook / LinkedIn / TikTok</td></tr>
+  <tr><td><strong>Data pubblicazione</strong></td><td>Data</td><td>—</td></tr>
+  <tr><td><strong>Link pubblicato</strong></td><td>URL</td><td>Link al post pubblicato</td></tr>
+  <tr><td><strong>Performance</strong></td><td>Testo</td><td>Reach, CTR, CPL se ads</td></tr>
+</table>
+
+<h3 style="margin-bottom:.8rem; margin-top:1.5rem">Come si usa in pratica</h3>
+<ul class="checklist">
+  <li><strong>Description del task:</strong> contiene lo script completo (IT + ES se applicabile) + note di produzione + B-roll suggerito.</li>
+  <li><strong>Subtask:</strong> ogni task video ha 3 subtask — Registrazione, Editing, Pubblicazione. Ognuno si chiude indipendentemente.</li>
+  <li><strong>Assegnazione:</strong> Registrazione → Marco. Editing → Steeno (o chi produce). Pubblicazione → Steeno.</li>
+  <li><strong>Commenti:</strong> feedback su bozze video, correzioni copy, note approvazione — tutto dentro il task, non su WhatsApp.</li>
+  <li><strong>Vista Timeline:</strong> usare per pianificare il calendario editoriale visualizzando le date di pubblicazione.</li>
+</ul>
+
+<div class="rule" style="border-color:var(--clickup)"><strong style="color:var(--clickup)">Lista ClickUp da creare:</strong> Spazio LENGOSTEENO → Folder "COMUNICAZIONE" → 2 liste: "Piano Contenuti" (organico) + "Ads Campagne" (paid). Non mischiare organico e paid nello stesso kanban.</div>
+</section>
+
+</div><!-- /container -->
+
+<div style="text-align:center;padding:3rem 1rem;color:var(--muted);font-size:.78rem;border-top:1px solid var(--border)">
+  Piano Comunicazione Lengosteeno · v1.0 · 12 giugno 2026
+</div>
+
+</body>
+</html>
