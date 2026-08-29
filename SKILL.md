@@ -25,8 +25,10 @@ Canale attuale: solo Instagram (LinkedIn e altri canali arriveranno dopo, con co
 ## 2. Il differenziatore Lengosteeno — fonte di verità
 
 Prima di scrivere qualsiasi copy, leggere (o rileggere se sono passati giorni):
-- `/Users/marcomarengo/Documents/agency-clients/01_Engo Agency/Lengosteeno/05-contenuti/strategia/report_strategico_lengosteeno.md`
-- `/Users/marcomarengo/Documents/agency-clients/01_Engo Agency/Lengosteeno/05-contenuti/strategia/piano-comunicazione-lengosteeno.html`
+- In locale (sessione interattiva su Mac): `/Users/marcomarengo/Documents/agency-clients/01_Engo Agency/Lengosteeno/05-contenuti/strategia/report_strategico_lengosteeno.md` e `piano-comunicazione-lengosteeno.html` nella stessa cartella.
+- Dalla routine cloud (repo pubblico, documenti riservati non ci stanno): su Google Drive, via connettore Drive —
+  - Report Strategico: https://drive.google.com/file/d/1zMHpRs8GuGedMbJzim01qK6OK8-zp72P/view
+  - Piano Comunicazione: https://drive.google.com/file/d/1d1IJIOhdB1HMYxRYvMcytdBkLzKSOKNN/view
 
 Lo spunto del giorno deve sempre passare per il filtro: "cosa farebbe/direbbe Lengosteeno di diverso su questo, rispetto a un'agenzia qualsiasi del settore". Se il post non supera questo filtro (è genericamente d'accordo con la notizia senza un angolo Lengosteeno), riscriverlo finché non ce l'ha.
 

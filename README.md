@@ -11,11 +11,9 @@ hostelería/turismo). La routine clona questo repo ad ogni esecuzione.
   gli articoli delle ultime N ore. Testato e funzionante con feed reali:
   Hosteltur, Preferente, Search Engine Land, Marketing AI Institute,
   Social Media Today.
-- `reference/report_strategico_lengosteeno.md` e
-  `reference/piano-comunicazione-lengosteeno.html` — copia del metodo e
-  differenziatore Lengosteeno (fonte di verità per il tono/angolo dei
-  post). Aggiornare qui se il metodo cambia — la routine legge da qui,
-  non dal Mac locale.
+- Metodo e differenziatore Lengosteeno: **non in questo repo** (repo
+  pubblico, quei documenti sono riservati). Vivono su Google Drive,
+  letti dalla routine via connettore Drive — link in `SKILL.md`.
 - `SKILL.md` — la pipeline completa passo-passo (stessa skill installata
   in locale su `~/.claude/skills/lengosteeno-daily-content/`).
 
